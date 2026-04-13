@@ -38,6 +38,11 @@ header { padding: 60px 0 0; }
 .post-card { display: block; padding: 18px 22px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--dark); font-size: 0.92em; line-height: 1.55; transition: border-color 0.25s, box-shadow 0.25s; }
 .post-card:hover { border-color: var(--wine); box-shadow: 0 4px 16px rgba(114,47,55,0.08); }
 .post-card .post-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
+.resume-link { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--gold); border-radius: 5px; background: rgba(184,148,62,0.06); color: #8A6820; font-size: 0.85em; text-decoration: none; margin: 10px 0 8px; transition: background 0.2s; }
+.resume-link:hover { background: rgba(184,148,62,0.14); }
+.header-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.header-links a { font-size: 0.78em; color: var(--wine); text-decoration: none; border-bottom: 1px solid rgba(114,47,55,0.25); padding-bottom: 1px; }
+.header-links a:hover { border-bottom-color: var(--wine); }
 .skills-text { font-size: 0.95em; color: var(--warm-gray); line-height: 1.8; }
 .contacts { display: flex; gap: 20px; flex-wrap: wrap; }
 .contact-link { display: inline-flex; align-items: center; padding: 12px 22px; background: var(--wine); color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; font-weight: 400; letter-spacing: 0.02em; transition: background 0.25s; }
@@ -70,6 +75,11 @@ footer { padding: 50px 0 40px; }
           <li>Живу в Белграде, пишу на русском</li>
           <li class="accent">Философия научила думать и формулировать, а&nbsp;вино дало предмет, о&nbsp;котором я&nbsp;никогда не&nbsp;устаю размышлять</li>
         </ul>
+        <a href="https://drive.google.com/file/d/1IZQTuZy0nsrmzR_Q1mteaIpdNqdi7Lcm/view?usp=drivesdk" class="resume-link" target="_blank">⬇&nbsp; Скачать резюме PDF</a>
+        <div class="header-links">
+          <a href="https://t.me/orlsve" target="_blank">Написать в Telegram →</a>
+          <a href="#contacts">Связаться →</a>
+        </div>
       </div>
     </div>
   </header>
@@ -141,7 +151,7 @@ footer { padding: 50px 0 40px; }
 
   <div class="divider"></div>
 
-  <section>
+  <section id="contacts">
     <h2 class="section-title">Связаться</h2>
     <div class="contacts">
       <a href="https://t.me/orlsve" target="_blank" class="contact-link">Написать в Telegram</a>
