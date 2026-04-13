@@ -49,7 +49,8 @@ header { padding: 60px 0 0; }
 .contact-link:hover { background: var(--wine-light); }
 .contact-link.secondary { background: transparent; color: var(--wine); border: 1px solid var(--wine); }
 .contact-link.secondary:hover { background: var(--wine); color: #fff; }
-footer { padding: 50px 0 40px; }
+footer { padding: 32px 0 40px; }
+.footer-inner { text-align: center; font-size: 0.72em; color: #aaa; border-top: 1px solid var(--border); padding-top: 20px; }
 @media (max-width: 640px) {
   .header-inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
   .photo-wrapper { width: 160px; height: 200px; }
@@ -139,8 +140,6 @@ footer { padding: 50px 0 40px; }
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <section id="contacts">
     <h2 class="section-title">Связаться</h2>
     <div class="contacts">
@@ -149,7 +148,9 @@ footer { padding: 50px 0 40px; }
     </div>
   </section>
 
-  <footer><div class="divider" style="margin: 0 auto 20px;"></div></footer>
+  <footer>
+    <div class="footer-inner">© 2026 Светлана Орлова</div>
+  </footer>
 </div>
 </body>
 </html>
