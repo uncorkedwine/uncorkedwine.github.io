@@ -1,8 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git push:*)",
       "WebFetch(domain:uncorkedwine.work)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
     ]
   }
 }
