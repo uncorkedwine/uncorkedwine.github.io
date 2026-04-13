@@ -46,7 +46,7 @@ header { padding: 60px 0 48px; }
 .header-links a:hover { border-bottom-color: var(--wine); }
 .skills-text { font-size: 0.95em; color: var(--warm-gray); line-height: 1.8; }
 .contacts { display: flex; gap: 24px; flex-wrap: wrap; }
-.contact-link { display: inline-flex; align-items: center; padding: 12px 22px; background: var(--wine); color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; font-weight: 400; letter-spacing: 0.02em; transition: background 0.25s; }
+.contact-link { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; background: var(--wine); color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.9em; font-weight: 400; letter-spacing: 0.02em; transition: background 0.25s; }
 .contact-link:hover { background: var(--wine-light); }
 .contact-link.secondary { background: transparent; color: var(--wine); border: 1px solid var(--wine); }
 .contact-link.secondary:hover { background: var(--wine); color: #fff; }
@@ -146,8 +146,22 @@ footer { padding: 32px 0 40px; }
   <section id="contacts">
     <h2 class="section-title">Связаться</h2>
     <div class="contacts">
-      <a href="https://t.me/orlsve" target="_blank" class="contact-link">Написать в Telegram</a>
-      <a href="https://t.me/uncorkedwine" target="_blank" class="contact-link secondary">Канал «откупорено»</a>
+      <a href="https://t.me/orlsve" target="_blank" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.985 13.64l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.946z"/></svg>
+        Написать в Telegram
+      </a>
+      <a href="mailto:svetlana.n.orlova@gmail.com" class="contact-link secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        svetlana.n.orlova@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/svetlana-orlova-44b961a5/" target="_blank" class="contact-link secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://t.me/uncorkedwine" target="_blank" class="contact-link secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.985 13.64l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.946z"/></svg>
+        Канал «откупорено»
+      </a>
     </div>
   </section>
 
