@@ -1,3 +1,7 @@
+# Allow all crawlers — search engines, AI indexers and training bots.
+# Portfolio site: maximum visibility is the goal.
+
 User-agent: *
 Allow: /
+
 Sitemap: https://uncorkedwine.work/sitemap.xml
