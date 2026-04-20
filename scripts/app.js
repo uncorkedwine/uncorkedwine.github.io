@@ -3,13 +3,15 @@
   // Mark elements currently in viewport as revealed BEFORE hiding the rest.
   // This prevents a flash where static content would render visible, then go
   // to opacity 0 when html.js is added, then fade back in.
-  const inViewport = (el) => {
+  // Batch all reads before any writes to avoid forced reflow per iteration.
+  const vh = window.innerHeight;
+  const all = document.querySelectorAll('.rv');
+  const visible = [];
+  for (const el of all) {
     const r = el.getBoundingClientRect();
-    return r.top < window.innerHeight && r.bottom > 0;
-  };
-  document.querySelectorAll('.rv').forEach((el) => {
-    if (inViewport(el)) el.classList.add('in');
-  });
+    if (r.top < vh && r.bottom > 0) visible.push(el);
+  }
+  for (const el of visible) el.classList.add('in');
 
   document.documentElement.classList.add('js');
 
