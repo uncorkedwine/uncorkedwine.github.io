@@ -7,9 +7,9 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 
-/* scroll reveal */
-.rv { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(.2,.6,.2,1), transform 0.9s cubic-bezier(.2,.6,.2,1); }
-.rv.in { opacity: 1; transform: none; }
+/* scroll reveal — only hide when JS is active; no-JS users see content immediately */
+html.js .rv { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(.2,.6,.2,1), transform 0.9s cubic-bezier(.2,.6,.2,1); }
+html.js .rv.in { opacity: 1; transform: none; }
 .rv.d1 { transition-delay: 0.08s; }
 .rv.d2 { transition-delay: 0.16s; }
 .rv.d3 { transition-delay: 0.24s; }
