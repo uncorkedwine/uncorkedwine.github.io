@@ -1,14 +1,49 @@
+/* =================================================================
+   Reset + scroll-reveal base
+   ================================================================= */
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; }
+  /* scroll reveal */
+  .rv { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(.2,.6,.2,1), transform 0.9s cubic-bezier(.2,.6,.2,1); }
+  .rv.in { opacity: 1; transform: none; }
+  .rv.d1 { transition-delay: 0.08s; }
+  .rv.d2 { transition-delay: 0.16s; }
+  .rv.d3 { transition-delay: 0.24s; }
+  .rv.d4 { transition-delay: 0.32s; }
 /* =======================================================
    V3 — TECH-SOMM
    Space Grotesk (display + body) + JetBrains Mono
    Минимал: off-white / графит / кирпичный акцент
    ======================================================= */
 
-body[data-variant="v3"] {
+body {
   background: var(--v3-bg);
   color: var(--v3-ink);
+  position: relative;
 }
-.v3 {
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 85% 12%, color-mix(in oklab, var(--v3-accent) 18%, transparent) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 35% at 8% 78%, color-mix(in oklab, var(--v3-accent) 12%, transparent) 0%, transparent 65%),
+    radial-gradient(ellipse 30% 25% at 92% 88%, color-mix(in oklab, var(--v3-accent-2) 10%, transparent) 0%, transparent 60%);
+}
+body > * { position: relative; z-index: 1; }
+body {
   /* light (default) */
   --v3-bg: #f2f1ee;
   --v3-panel: #e9e7e1;
@@ -25,7 +60,7 @@ body[data-variant="v3"] {
   background: var(--v3-bg);
   line-height: 1.5;
 }
-body[data-variant="v3"][data-theme="dark"] .v3 {
+body[data-theme="dark"] {
   --v3-bg: #0f0e0b;
   --v3-panel: #161410;
   --v3-card: #1a1813;
@@ -36,7 +71,7 @@ body[data-variant="v3"][data-theme="dark"] .v3 {
   --v3-accent: #e57358;
   --v3-accent-2: #f1efe8;
 }
-body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: var(--v3-ink); }
+body[data-theme="dark"] { background: var(--v3-bg); color: var(--v3-ink); }
 
 /* top */
 .v3-top {
@@ -259,7 +294,6 @@ body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: va
   color: var(--v3-ink);
 }
 .v3-about-body p { margin: 0 0 18px; }
-.v3-about-body p:first-child { font-size: 22px; line-height: 1.45; }
 .v3-creds {
   padding: 28px;
   background: var(--v3-card);
@@ -376,7 +410,7 @@ body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: va
 }
 .v3-pub-head {
   display: grid;
-  grid-template-columns: 90px 140px 1fr 200px 40px;
+  grid-template-columns: 140px 1fr 200px 40px;
   gap: 20px;
   padding: 0 0 14px;
   border-bottom: 1px solid var(--v3-rule);
@@ -388,7 +422,7 @@ body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: va
 }
 .v3-pub {
   display: grid;
-  grid-template-columns: 90px 140px 1fr 200px 40px;
+  grid-template-columns: 140px 1fr 200px 40px;
   gap: 20px;
   align-items: center;
   padding: 22px 0;
@@ -524,7 +558,7 @@ body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: va
 }
 .v3-contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1.5fr 2fr 1.2fr 1fr;
   gap: 12px;
 }
 .v3-clink {
@@ -552,6 +586,8 @@ body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: va
   font-weight: 500;
   font-size: 18px;
   letter-spacing: -0.01em;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 .v3-clink-ar {
   position: absolute;
@@ -590,3 +626,4 @@ body[data-variant="v3"][data-theme="dark"] { background: var(--v3-bg); color: va
   .v3-contact-grid { grid-template-columns: 1fr 1fr; }
   .v3-footer { flex-direction: column; gap: 6px; }
 }
+
