@@ -1,10 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:uncorkedwine.work)"
+      "Bash(npx http-server:*)",
+      "Bash(npx --registry=https://registry.npmjs.org http-server:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git show:*)",
+      "WebFetch(domain:uncorkedwine.work)",
+      "WebFetch(domain:fonts.googleapis.com)"
     ],
-    "ask": [
-      "Bash(git push:*)"
-    ]
+    "ask": ["Bash(git push:*)"],
+    "deny": ["Bash(rm -rf:*)", "Bash(git push --force:*)"]
   }
 }
