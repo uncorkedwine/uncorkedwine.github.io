@@ -17,9 +17,9 @@ Personal website for Светлана Орлова (wine writer). Single static 
 
 ## Local development
 
-Run from the repo root, then open http://localhost:8080:
+Run from the repo root, then open http://localhost:8000:
 
-    npx --registry=https://registry.npmjs.org http-server
+    npx --registry=https://registry.npmjs.org http-server -p 8000
 
 (The explicit `--registry` flag bypasses corporate npm proxies that may block the default registry.)
 
