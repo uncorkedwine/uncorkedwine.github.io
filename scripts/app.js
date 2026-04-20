@@ -1,5 +1,16 @@
 /* Reveal-on-scroll — content is static HTML; this only animates it in. */
 (function () {
+  // Mark elements currently in viewport as revealed BEFORE hiding the rest.
+  // This prevents a flash where static content would render visible, then go
+  // to opacity 0 when html.js is added, then fade back in.
+  const inViewport = (el) => {
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  };
+  document.querySelectorAll('.rv').forEach((el) => {
+    if (inViewport(el)) el.classList.add('in');
+  });
+
   document.documentElement.classList.add('js');
 
   const io = new IntersectionObserver((entries) => {
