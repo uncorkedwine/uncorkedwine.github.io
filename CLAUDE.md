@@ -36,3 +36,4 @@ Push to `main` — GitHub Pages deploys automatically. No build step.
 - Update `sitemap.xml` `lastmod` when page content changes meaningfully.
 - Keep separation: text content in `scripts/content.js`, render logic in `scripts/app.js`, styles in `styles/main.css`. Do not inline CSS/JS into HTML.
 - `.superpowers/` and `docs/superpowers/` are gitignored **intentionally** — Superpowers brainstorm and plan artifacts are local-only and must not be committed.
+- **Never add Claude as a co-author in commit messages.** Do not include `Co-Authored-By: Claude` or any similar attribution in any commit.
