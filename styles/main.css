@@ -15,6 +15,10 @@ html.js .rv.in { opacity: 1; transform: none; }
 .rv.d3 { transition-delay: 0.24s; }
 .rv.d4 { transition-delay: 0.32s; }
 
+@media (prefers-reduced-motion: reduce) {
+  html.js .rv { opacity: 1; transform: none; transition: none; }
+}
+
 /* =================================================================
    Theme — Space Grotesk + JetBrains Mono
    Off-white / graphite / brick accent
