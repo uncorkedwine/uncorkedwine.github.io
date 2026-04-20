@@ -1,2 +1,4 @@
+# Superpowers brainstorm and plan artifacts are local-only.
+# Do not commit spec drafts or plans to the repo.
 .superpowers/
 docs/superpowers/

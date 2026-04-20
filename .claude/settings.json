@@ -1,10 +1,25 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:uncorkedwine.work)"
+      "Bash(npx http-server:*)",
+      "Bash(npx --registry=https://registry.npmjs.org http-server:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git show:*)",
+      "WebFetch(domain:uncorkedwine.work)",
+      "WebFetch(domain:fonts.googleapis.com)",
+      "Bash(curl -s http://localhost:8000/)",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_close"
     ],
-    "ask": [
-      "Bash(git push:*)"
-    ]
+    "ask": ["Bash(git push:*)"],
+    "deny": ["Bash(rm -rf:*)", "Bash(git push --force:*)"]
   }
 }
